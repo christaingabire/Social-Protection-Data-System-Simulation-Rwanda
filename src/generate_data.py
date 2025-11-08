@@ -48,4 +48,4 @@ df["benefit_amount"] = np.where(df["enrolled"]
 , np.random.gamma(2, 5000, N), 0.0)
 
 df.to_csv("data/synthetic_social_protection.csv", index=False)
-print("✅ Synthetic data created -> data/synthetic_social_protection.csv")
+print(" Synthetic data created -> data/synthetic_social_protection.csv")

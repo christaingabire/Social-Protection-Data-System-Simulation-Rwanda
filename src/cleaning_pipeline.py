@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from pandas.api.types import CategoricalDtype
 import seaborn as sns
+from sqlalchemy import create_engine
 
 
 # ---------- Load ----------
@@ -120,3 +121,11 @@ plt.savefig("figures/benefit_distribution.png", dpi=150)
 plt.close()
 
 print(" charts refreshed with new styles")
+
+
+# ---------- Save to SQLite ----------
+db_path = "data/social_protection.db"
+engine = create_engine(f"sqlite:///{db_path}")
+
+metrics.to_sql("coverage_metrics", engine, if_exists="replace", index=False)
+print(f" Saved coverage_metrics to {db_path}")
