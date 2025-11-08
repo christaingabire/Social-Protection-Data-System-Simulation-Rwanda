@@ -1,6 +1,6 @@
 # Social Protection Data System Simulation — Rwanda
 
-This project is a small, open-source simulation inspired by my work at the Rwanda Social Security Board. It models how data pipelines and analytics can help governments monitor coverage, identify inequalities, and design more inclusive social protection systems. In this project I'm entirely using **entirely synthetic data!**
+This project is a small, open-source simulation inspired by my work at the Rwanda Social Security Board. It models how data pipelines and analytics can help governments monitor coverage, identify inequalities, and design more inclusive social protection systems. In this project I'm entirely using **entirely synthetic data**
 
 ---
 
@@ -47,12 +47,25 @@ Social protection data is often sensitive and fragmented. I wanted to show, in a
 
 ---
 
-### Next Steps
 
-- Add a database layer (SQLite or DuckDB) for versioned metrics  
-- Explore an interactive dashboard (Streamlit or Superset)  
-- Document lessons for **AI for Social Good** and **Data for Governance** work
+### Interactive Dashboard
 
+The data pipeline feeds into a lightweight Streamlit dashboard, which allows users to explore coverage and benefit patterns interactively.
+
+#### Features
+- Filter by district and scheme type  
+- View key performance indicators (KPIs): enrollment rate, gender gap, top district  
+- Explore charts:
+  - Enrollment rate by district  
+  - Gender composition among enrolled (pie chart)  
+  - Enrollment by income level (equity focus)  
+  - Benefit distribution among enrolled  
+- Export data directly as CSV
+
+To run locally:
+```bash
+streamlit run src/dashboard_app.py
+```
 ---
 
 ### Findings & Discussion
@@ -64,9 +77,10 @@ This simulation highlights structural patterns that often emerge in real social 
 - **Gender representation:** The gender composition among enrolled individuals is roughly balanced in this simulation, but small gender gaps persist. This suggests that gender-focused outreach, especially for community-based and informal-sector schemes, remains relevant  
 - **Benefit distribution:** The benefit curve is positively skewed, meaning most participants receive smaller benefits while a small subset receives higher payouts. This reflects typical inequality in contributory systems, where benefit amounts depend on income and scheme type
 
-Although entirely synthetic, these patterns illustrate how data pipelines and analytics could help real institutions like RSSB monitor inclusion, identify vulnerable groups, and evaluate program reach, **without accessing confidential citizen data**
+Although entirely synthetic, these patterns illustrate how data pipelines and analytics could help real institutions like RSSB monitor inclusion, identify vulnerable groups, and evaluate program reach, without accessing confidential citizen data
 
-This simulation demonstrates how **AI and data engineering can serve social good**: by building safe, reproducible models that guide equity-centered policy design
+This simulation demonstrates how AI and data engineering can serve social good: by building safe, reproducible models that guide equity-centered policy design
 
+---
 
-* Created by Christa Rusanganwa Ingabire*
+** Created by Christa Rusanganwa Ingabire**
