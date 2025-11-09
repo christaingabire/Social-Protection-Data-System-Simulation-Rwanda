@@ -1,4 +1,4 @@
-# Social Protection Data System Simulation — Rwanda
+# Social Protection Data System Simulation in Rwanda
 
 This open-source simulation is inspired by my work at the Rwanda Social Security Board (RSSB). It demonstrates how synthetic data, analytics, and machine learning can be used to explore social protection coverage and inclusion in a transparent, reproducible way. In this project, I'm entirely using without using any confidential data!
 
@@ -83,4 +83,4 @@ Social protection data is often sensitive and fragmented. This simulation shows 
 
 ---
 
-** Created by Christa Rusanganwa Ingabire**
+**Created by Christa Rusanganwa Ingabire**
